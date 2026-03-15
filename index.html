@@ -3,101 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Твоя професія: Оператор ПЗ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <title>Професія: Оператор з обробки інформації та ПЗ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+        }
+
         body { 
-            font-family: 'Ubuntu', sans-serif; 
+            font-family: 'Roboto', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text-main); 
             margin: 0; 
-            padding: 0;
-            /* Сучасний фон-градієнт */
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #f8fafc;
-            min-height: 100vh;
+            line-height: 1.6;
         }
 
         header { 
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            padding: 60px 20px; 
-            text-align: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .container { max-width: 900px; margin: 40px auto; padding: 20px; }
-
-        /* Блок з картинкою */
-        .hero-image {
-            width: 100%;
-            height: 350px;
-            background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80');
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1510511459019-5dee667ffb8b?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            padding: 100px 20px; 
+            text-align: center;
+            border-bottom: 3px solid var(--accent);
         }
 
-        .card { 
-            background: rgba(255, 255, 255, 0.05);
-            padding: 30px; 
+        h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin: 0; color: var(--accent); text-transform: uppercase; }
+        header p { font-size: 1.3rem; max-width: 700px; margin: 20px auto; color: var(--text-dim); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+        .section { 
+            background: var(--card-bg); 
+            padding: 40px; 
             border-radius: 15px; 
-            border: 1px solid rgba(255,255,255,0.1);
-            margin-bottom: 25px;
-            transition: 0.3s;
+            margin-bottom: 30px; 
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .card:hover { background: rgba(255, 255, 255, 0.08); }
+        h2 { font-family: 'Montserrat', sans-serif; color: var(--accent); border-left: 5px solid var(--accent); padding-left: 15px; margin-top: 0; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        
+        .info-box { background: rgba(255,255,255,0.03); padding: 20px; border-radius: 10px; border: 1px solid rgba(56, 189, 248, 0.1); }
+        .info-box h3 { margin-top: 0; color: #818cf8; }
 
-        h1 { color: #38bdf8; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        h2 { color: #818cf8; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; }
 
-        .btn { 
-            display: inline-block; 
-            background: #38bdf8; 
-            color: #0f172a; 
-            padding: 15px 35px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .btn:hover { background: #7dd3fc; transform: scale(1.05); }
-
-        .footer { text-align: center; padding: 40px; color: #64748b; font-size: 14px; }
+        .footer { text-align: center; padding: 60px; color: var(--text-dim); font-size: 0.9rem; }
+        
+        .highlight { color: var(--accent); font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Оператор програмного забезпечення</h1>
-    <p>Майбутнє належить тим, хто керує інформацією</p>
+    <h1>Світ цифрових можливостей</h1>
+    <p>Все про професію: Оператор з обробки інформації та програмного забезпечення</p>
 </header>
 
 <div class="container">
-    <div class="hero-image"></div>
 
-    <div class="card">
-        <h2>🔥 Чому це твій вибір?</h2>
-        <p>Оператор ПЗ — це не просто робота за комп'ютером. Це вміння створювати цифрові світи, керувати даними та підтримувати складні системи.</p>
-        <ul>
-            <li>Вивчення пакетів Adobe та Microsoft</li>
-            <li>Робота з "залізом" та мережами</li>
-            <li>Шлях у велике IT через практику</li>
-        </ul>
+    <div class="section">
+        <h2>Що це за професія?</h2>
+        <p>Це сучасна інтегрована професія, яка поєднує в собі навички роботи з комп'ютерним залізом, складним софтом та цифровими даними. Сьогодні <span class="highlight">Оператор ПЗ</span> — це фундамент будь-якого офісу, банку чи IT-компанії. Такий фахівець знає, як перетворити масив хаотичних даних на чітку структуру.</p>
     </div>
 
-    <div class="card" style="text-align: center;">
-        <h2>Готовий до старту?</h2>
-        <p>Приєднуйся до професіоналів та опануй навички, які завжди в ціні.</p>
-        <a href="https://github.com/Serhiy9090" class="btn">ПРИЄДНАТИСЯ</a>
+    <div class="grid">
+        <div class="section">
+            <h2>Основні завдання</h2>
+            <ul>
+                <li><b>Обробка текстів:</b> Створення та складне форматування документів, звітів та наказів за стандартами ДСТУ.</li>
+                <li><b>Робота з таблицями:</b> Автоматизація розрахунків у Excel, створення графіків та діаграм для аналітики.</li>
+                <li><b>Бази даних:</b> Проектування та наповнення баз даних в Access для систематизації великих обсягів інфо.</li>
+                <li><b>Графіка:</b> Обробка фотографій у Photoshop та створення векторних логотипів у CorelDRAW.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Технічні навички</h2>
+            <ul>
+                <li>Встановлення та налаштування Windows, Linux та драйверів.</li>
+                <li>Монтаж та діагностика комп'ютерних мереж (локальний інтернет).</li>
+                <li>Захист інформації від вірусів та несанкціонованого доступу.</li>
+                <li>Робота з периферією: сканери, принтери, 3D-принтери, плоттери.</li>
+            </ul>
+        </div>
     </div>
+
+    <div class="section">
+        <h2>Що вивчають студенти?</h2>
+        <div class="grid">
+            <div class="info-box">
+                <h3>Офісне ПЗ</h3>
+                <p>Поглиблене вивчення Word, Excel, PowerPoint та Outlook для бізнес-комунікацій.</p>
+            </div>
+            <div class="info-box">
+                <h3>Мультимедіа</h3>
+                <p>Створення презентацій, відеомонтаж та редагування звукових файлів.</p>
+            </div>
+            <div class="info-box">
+                <h3>Веб-технології</h3>
+                <p>Основи побудови сайтів (HTML/CSS) та адміністрування CMS-систем.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Де можна працювати?</h2>
+        <p>Після отримання диплому перед фахівцем відкриті двері у:</p>
+        <p>🔹 Банківські установи (оператор БД);<br>
+           🔹 Державні органи (адміністратор інформаційних систем);<br>
+           🔹 Рекламні агентства (дизайнер-верстальник);<br>
+           🔹 Приватні IT-компанії (Junior системний адміністратор або контент-менеджер).
+        </p>
+    </div>
+
 </div>
 
 <div class="footer">
-    &copy; 2026 Проєкт Serhiy9090 • Навчальна робота
+    &copy; 2026 Професійна презентація • Розробив Serhiy9090 для навчального проекту
 </div>
 
 </body>
