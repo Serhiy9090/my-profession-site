@@ -3,133 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Професія: Оператор з обробки інформації та ПЗ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>ДПТНЗ КЦПТО | Оператор з обробки інформації</title>
     <style>
         :root {
-            --bg: #0f172a;
-            --card-bg: #1e293b;
-            --accent: #38bdf8;
-            --text-main: #f1f5f9;
-            --text-dim: #94a3b8;
+            --primary-blue: #004488;
+            --accent-yellow: #ffcc00;
+            --light-bg: #f8f9fa;
         }
 
-        body { 
-            font-family: 'Roboto', sans-serif; 
-            background-color: var(--bg); 
-            color: var(--text-main); 
-            margin: 0; 
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
             line-height: 1.6;
+            color: #333;
+            background-color: var(--light-bg);
         }
 
-        header { 
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                        url('https://images.unsplash.com/photo-1510511459019-5dee667ffb8b?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 20px; 
+        /* Шапка з назвою закладу */
+        .institution-header {
+            background-color: white;
+            padding: 15px 20px;
             text-align: center;
-            border-bottom: 3px solid var(--accent);
+            border-bottom: 3px solid var(--primary-blue);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            color: var(--primary-blue);
         }
 
-        h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin: 0; color: var(--accent); text-transform: uppercase; }
-        header p { font-size: 1.3rem; max-width: 700px; margin: 20px auto; color: var(--text-dim); }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-
-        .section { 
-            background: var(--card-bg); 
-            padding: 40px; 
-            border-radius: 15px; 
-            margin-bottom: 30px; 
-            border: 1px solid rgba(255,255,255,0.05);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        /* Головний банер (Hero) */
+        header {
+            background: linear-gradient(rgba(0, 68, 136, 0.8), rgba(0, 68, 136, 0.8)), 
+                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200') center/cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
         }
 
-        h2 { font-family: 'Montserrat', sans-serif; color: var(--accent); border-left: 5px solid var(--accent); padding-left: 15px; margin-top: 0; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        
-        .info-box { background: rgba(255,255,255,0.03); padding: 20px; border-radius: 10px; border: 1px solid rgba(56, 189, 248, 0.1); }
-        .info-box h3 { margin-top: 0; color: #818cf8; }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--accent-yellow);
+        }
 
-        ul { padding-left: 20px; }
-        li { margin-bottom: 12px; }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
 
-        .footer { text-align: center; padding: 60px; color: var(--text-dim); font-size: 0.9rem; }
+        /* Секція "Про професію" */
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .about-text { flex: 1; min-width: 300px; }
         
-        .highlight { color: var(--accent); font-weight: bold; }
+        /* Картки навичок */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-yellow);
+            color: #000;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #e6b800;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Мобільна адаптація */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            .institution-header { font-size: 0.75rem; }
+        }
     </style>
 </head>
 <body>
 
+<div class="institution-header">
+    ДПТНЗ "Краматорський центр професійно-технічної освіти"
+</div>
+
 <header>
-    <h1>Світ цифрових можливостей</h1>
-    <p>Все про професію: Оператор з обробки інформації та програмного забезпечення</p>
+    <h1>Оператор з обробки інформації та ПЗ</h1>
+    <p style="font-size: 1.2rem;">Набір на 2026-2027 навчальний рік відкрито!</p>
+    <a href="tel:0507087941" class="btn">Зателефонувати нам</a>
 </header>
 
 <div class="container">
-
-    <div class="section">
-        <h2>Що це за професія?</h2>
-        <p>Це сучасна інтегрована професія, яка поєднує в собі навички роботи з комп'ютерним залізом, складним софтом та цифровими даними. Сьогодні <span class="highlight">Оператор ПЗ</span> — це фундамент будь-якого офісу, банку чи IT-компанії. Такий фахівець знає, як перетворити масив хаотичних даних на чітку структуру.</p>
+    <div class="about-section">
+        <div class="about-text">
+            <h2>Чому це круто?</h2>
+            <p>Це універсальна професія, що поєднує навички системного адміністратора, веб-дизайнера та офіс-менеджера. Ви стаєте незамінним фахівцем у будь-якій цифровій компанії.</p>
+        </div>
+        <div class="about-text" style="background: var(--primary-blue); color: white; padding: 25px; border-radius: 15px;">
+            <h3>На базі 9 класів:</h3>
+            <ul>
+                <li>Вступ без НМТ та іспитів</li>
+                <li>Стипендія від 1250 грн/міс</li>
+                <li>Якісне дистанційне навчання</li>
+            </ul>
+        </div>
     </div>
 
+    <h2 style="text-align: center; margin-bottom: 30px;">Ви навчитеся:</h2>
     <div class="grid">
-        <div class="section">
-            <h2>Основні завдання</h2>
-            <ul>
-                <li><b>Обробка текстів:</b> Створення та складне форматування документів, звітів та наказів за стандартами ДСТУ.</li>
-                <li><b>Робота з таблицями:</b> Автоматизація розрахунків у Excel, створення графіків та діаграм для аналітики.</li>
-                <li><b>Бази даних:</b> Проектування та наповнення баз даних в Access для систематизації великих обсягів інфо.</li>
-                <li><b>Графіка:</b> Обробка фотографій у Photoshop та створення векторних логотипів у CorelDRAW.</li>
-            </ul>
+        <div class="card">
+            <h3>💻 Розробка</h3>
+            <p>Створення сайтів на HTML/CSS, основи мов Python та C++.</p>
         </div>
-
-        <div class="section">
-            <h2>Технічні навички</h2>
-            <ul>
-                <li>Встановлення та налаштування Windows, Linux та драйверів.</li>
-                <li>Монтаж та діагностика комп'ютерних мереж (локальний інтернет).</li>
-                <li>Захист інформації від вірусів та несанкціонованого доступу.</li>
-                <li>Робота з периферією: сканери, принтери, 3D-принтери, плоттери.</li>
-            </ul>
+        <div class="card">
+            <h3>⚙️ Техпідтримка</h3>
+            <p>Налаштування ПК, адміністрування мереж та систем.</p>
+        </div>
+        <div class="card">
+            <h3>📸 Контент</h3>
+            <p>Професійна обробка фото, відео та цифрової інформації.</p>
         </div>
     </div>
-
-    <div class="section">
-        <h2>Що вивчають студенти?</h2>
-        <div class="grid">
-            <div class="info-box">
-                <h3>Офісне ПЗ</h3>
-                <p>Поглиблене вивчення Word, Excel, PowerPoint та Outlook для бізнес-комунікацій.</p>
-            </div>
-            <div class="info-box">
-                <h3>Мультимедіа</h3>
-                <p>Створення презентацій, відеомонтаж та редагування звукових файлів.</p>
-            </div>
-            <div class="info-box">
-                <h3>Веб-технології</h3>
-                <p>Основи побудови сайтів (HTML/CSS) та адміністрування CMS-систем.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Де можна працювати?</h2>
-        <p>Після отримання диплому перед фахівцем відкриті двері у:</p>
-        <p>🔹 Банківські установи (оператор БД);<br>
-           🔹 Державні органи (адміністратор інформаційних систем);<br>
-           🔹 Рекламні агентства (дизайнер-верстальник);<br>
-           🔹 Приватні IT-компанії (Junior системний адміністратор або контент-менеджер).
-        </p>
-    </div>
-
 </div>
 
-<div class="footer">
-    &copy; 2026 Професійна презентація • Розробив Serhiy9090 для навчального проекту
-</div>
+<footer>
+    <h3>Обери своє майбутнє вже сьогодні!</h3>
+    <p>📍 м. Краматорськ (працюємо дистанційно)</p>
+    <p>📞 +38 (050) 708-79-41</p>
+</footer>
 
 </body>
 </html>
